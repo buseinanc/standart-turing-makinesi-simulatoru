@@ -46,7 +46,7 @@ index.html dosyasını herhangi bir modern tarayıcıda açın (Chrome, Firefox,
 
 ### 4. JSON dosyası seçin
 Uygulama açıldığında:
-- data/ klasöründeki örnek JSON dosyalarından birini seçebilir
+- `data/` klasöründeki örnek JSON dosyalarından birini seçebilir
 veya
 - kendi Turing makinesi JSON dosyanızı yükleyebilirsiniz.
 
@@ -79,7 +79,7 @@ Turing makinesi, aşağıdaki yapıya uygun bir JSON dosyası ile tanımlanmalı
 	
   ]
 }
-
+```
 ### Alanların Açıklaması
 
 - **states**: Makinedeki tüm durumlar (q0, q1 vb.)
