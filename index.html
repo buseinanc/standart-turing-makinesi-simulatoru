@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Turing Makinesi Simülatörü</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+        <h1>Turing Makinesi Simülatörü</h1>
+        
+		<div class="control-panel">
+			<div class="input-container">
+			    <input type="file" id="fileInput" accept=".json" class="file-input">
+			    <label for="fileInput" class="file-label">
+			        <span class="file-icon">📂</span>
+			        <span class="file-text">JSON Dosyası Seçin</span>
+			    </label>
+			</div>
+		</div>
+
+		<div class="tables-wrapper">
+		  	<div id="table-info">
+		  		<table class="table-info-styled">
+		  			<thead>
+	                    <tr><th>Bileşen</th><th>Değerler</th></tr>
+	                </thead>
+	                <tbody>
+	                    <tr><td>Durum Sayısı</td><td id="info-states-count">-</td></tr>
+	                    <tr><td>Durumlar</td><td id="info-states-list">-</td></tr>
+	                    <tr><td>Başlangıç Durumu</td><td><span id="info-start" class="badge start">-</span></td></tr>
+	                    <tr><td>Kabul Durumu</td><td><span id="info-accept" class="badge accept">-</span></td></tr>
+	                    <tr><td>Red Durumu</td><td><span id="info-reject" class="badge reject">-</span></td></tr>
+	                </tbody>
+	            </table>
+	        </div>
+            
+	        <!-- Sağ: Geçiş Kuralları Tablosu -->
+	        <div id="table-transition-container">
+	            <table class="table-transitions-styled">
+	               	<thead>
+	                    <tr>
+	                        <th>Şimdiki Durum</th>
+	                        <th>Okunan</th>
+							<th>Yazılan</th>
+							<th>Yön</th>
+							<th>Sonraki Durum</th>
+						</tr>
+					</thead>
+					<tbody id="transitions-body">
+						<!-- Kurallar JS ile dolacak -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Bant görselleştirmesi -->
+		<div class="tape-section">
+		  	<div class="section-label">Bant (Şerit)</div>
+		  	<div class="tape-wrapper">
+		    	<div id="tape">
+                    <div class="tape-cell placeholder">Dosya Bekleniyor...</div>
+                </div>
+		  	</div>
+		</div>
+
+		<!-- Durum göstergesi -->
+		<div class="status-bar">
+		  	<div class="status-item">
+		    	<span class="label">Mevcut Durum</span>
+		    	<span class="value" id="current-state">—</span>
+		  	</div>
+		  	<div class="status-item">
+		    	<span class="label">Adım</span>
+		    	<span class="value" id="step-count">0</span>
+		  	</div>
+		  	<div class="status-item">
+		    	<span class="label">Kafa Konumu</span>
+		    	<span class="value" id="head-pos">—</span>
+		  	</div>
+		  	<div class="status-item">
+		    	<span class="label">Sonuç</span>
+		    	<span id="result-msg">—</span>
+		  	</div>
+		</div>
+
+		<!-- Ana Kontrol Butonları -->
+		<div class="controls">
+		  	<button id="btn-step" class="btn btn-accent" disabled>Adım At</button>
+		  	<button id="btn-run" class="btn btn-primary" disabled>Çalıştır</button>
+			<button id="btn-reset" class="btn btn-danger" disabled>Sıfırla</button>
+		</div>
+
+		<!-- Adım geçmişi -->
+		<div class="log-section">
+		  	<div class="section-label">Adım Geçmişi</div>
+		  	<div id="log"><span class="log-placeholder">— henüz dosya yüklenmedi —</span></div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "states": ["q0", "q1", "q2", "q3", "q4", "qAccept", "qReject"],
+  "alphabet": ["a", "b", "c", "X", "Y", "Z", "B"],
+  "initial_state": "q0",
+  "accept_state": "qAccept",
+  "reject_state": "qReject",
+  "tape_input": "aaabbbccc",
+  "transitions": [
+    { "state": "q0", "read": "B", "write": "B", "move": "R", "next_state": "qAccept" },
+    { "state": "q0", "read": "a", "write": "X", "move": "R", "next_state": "q1" },
+	{ "state": "q0", "read": "Y", "write": "Y", "move": "R", "next_state": "q4" },
+	{ "state": "q0", "read": "b", "write": "b", "move": "R", "next_state": "qReject" },
+	
+    { "state": "q1", "read": "a", "write": "a", "move": "R", "next_state": "q1" },
+	{ "state": "q1", "read": "Y", "write": "Y", "move": "R", "next_state": "q1" },
+	{ "state": "q1", "read": "b", "write": "Y", "move": "R", "next_state": "q2" },
+	
+    { "state": "q2", "read": "b", "write": "b", "move": "R", "next_state": "q2" },
+	{ "state": "q2", "read": "Z", "write": "Z", "move": "R", "next_state": "q2" },
+	{ "state": "q2", "read": "c", "write": "Z", "move": "L", "next_state": "q3" },
+	
+    { "state": "q3", "read": "Z", "write": "Z", "move": "L", "next_state": "q3" },
+	{ "state": "q3", "read": "b", "write": "b", "move": "L", "next_state": "q3" },
+	{ "state": "q3", "read": "Y", "write": "Y", "move": "L", "next_state": "q3" },
+	{ "state": "q3", "read": "a", "write": "a", "move": "L", "next_state": "q3" },
+	{ "state": "q3", "read": "X", "write": "X", "move": "R", "next_state": "q0" },
+	
+	{ "state": "q4", "read": "Y", "write": "Y", "move": "R", "next_state": "q4" },
+	{ "state": "q4", "read": "Z", "write": "Z", "move": "R", "next_state": "q4" },
+	{ "state": "q4", "read": "B", "write": "B", "move": "R", "next_state": "qAccept" }
+  ]
+}
