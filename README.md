@@ -27,7 +27,7 @@ Kullanıcının yüklediği makine tanımlarına ve girdi dizilerine göre tape'
  │    └── ornek2.json
  ├── .gitignore
  └── README.md  
-
+```
 ## Kurulum ve Çalıştırma
 
 Bu proje herhangi bir kurulum veya bağımlılık gerektirmez.
