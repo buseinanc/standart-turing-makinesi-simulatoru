@@ -39,7 +39,7 @@ GitHub reposunu bilgisayarınıza klonlayın veya ZIP olarak indirin.
 
 ### 2. Proje klasörüne girin
 
-standart-turing-makinesi-simulatoru
+```standart-turing-makinesi-simulatoru```
 
 ### 3. Uygulamayı çalıştırın
 index.html dosyasını herhangi bir modern tarayıcıda açın (Chrome, Firefox, Edge).
